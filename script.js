@@ -309,9 +309,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function drawSoftLeaf(ctx, r) {
     const grad = ctx.createLinearGradient(0, r * 0.7, 0, -r * 0.9);
-    grad.addColorStop(0, '#589A79');
-    grad.addColorStop(0.55, '#79BD9A');
-    grad.addColorStop(1, '#CBEAD8');
+    grad.addColorStop(0, '#70AFC4');
+    grad.addColorStop(0.55, '#8CCCBE');
+    grad.addColorStop(1, '#ADD8C7');
     ctx.fillStyle = grad;
 
     ctx.beginPath();
@@ -321,7 +321,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ctx.closePath();
     ctx.fill();
 
-    ctx.strokeStyle = 'rgba(244, 250, 246, 0.6)';
+    ctx.strokeStyle = 'rgba(227, 232, 207, 0.65)';
     ctx.lineWidth = 0.8;
     ctx.beginPath();
     ctx.moveTo(0, r * 0.65);
@@ -361,8 +361,8 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         }
         const grad = fwCtx.createLinearGradient(rib.x, rib.y, rib.x + rib.len, rib.y + rib.len * 0.38);
-        grad.addColorStop(0, 'rgba(121, 189, 154, 0)');
-        grad.addColorStop(0.5, `rgba(121, 189, 154, ${(rib.alpha * burstAlpha).toFixed(3)})`);
+        grad.addColorStop(0, 'rgba(122, 193, 196, 0)');
+        grad.addColorStop(0.5, `rgba(122, 193, 196, ${(rib.alpha * burstAlpha).toFixed(3)})`);
         grad.addColorStop(1, 'rgba(255, 255, 255, 0)');
         fwCtx.strokeStyle = grad;
         fwCtx.lineWidth = 1.6;
@@ -521,40 +521,40 @@ document.addEventListener('DOMContentLoaded', () => {
     ctx.globalCompositeOperation = 'source-over';
     ctx.clearRect(0, 0, w, h);
 
-    // Soft #79BD9A Jade & Mint-Pearl foil gradient
+    // Coastal Seafoam, Sage-Cream & Sky-Teal (#ADD8C7 · #E3E8CF · #8CCCBE · #7AC1C4 · #70AFC4) foil gradient
     const grad = ctx.createLinearGradient(0, 0, w, h);
-    grad.addColorStop(0, '#62A885');
-    grad.addColorStop(0.25, '#CBEAD8');
-    grad.addColorStop(0.5, '#79BD9A');
-    grad.addColorStop(0.75, '#E3F3EA');
-    grad.addColorStop(1, '#589A79');
+    grad.addColorStop(0, '#70AFC4');
+    grad.addColorStop(0.25, '#ADD8C7');
+    grad.addColorStop(0.5, '#7AC1C4');
+    grad.addColorStop(0.75, '#E3E8CF');
+    grad.addColorStop(1, '#8CCCBE');
 
     ctx.fillStyle = grad;
     ctx.fillRect(0, 0, w, h);
 
     // Subtle foil shimmer grain pattern
     for (let i = 0; i < 350; i++) {
-      ctx.fillStyle = i % 2 === 0 ? 'rgba(244, 250, 246, 0.38)' : 'rgba(77, 140, 109, 0.16)';
+      ctx.fillStyle = i % 2 === 0 ? 'rgba(247, 249, 242, 0.38)' : 'rgba(112, 175, 196, 0.16)';
       const rx = Math.random() * w;
       const ry = Math.random() * h;
       ctx.fillRect(rx, ry, 2, 2);
     }
 
     // Ornamental inner filigree lines on the foil
-    ctx.strokeStyle = 'rgba(244, 250, 246, 0.78)';
+    ctx.strokeStyle = 'rgba(247, 249, 242, 0.78)';
     ctx.lineWidth = 1.5;
     ctx.beginPath();
     ctx.arc(w / 2, h / 2 - 12, 68, 0, Math.PI * 2);
     ctx.stroke();
 
     // Foil prompt text
-    ctx.fillStyle = '#234F3B';
+    ctx.fillStyle = '#244B57';
     ctx.font = '600 18px "Cinzel", serif';
     ctx.textAlign = 'center';
     ctx.fillText('SCRATCH HERE', w / 2, h / 2 - 14);
 
     ctx.font = 'italic 15px "Cormorant Garamond", serif';
-    ctx.fillStyle = '#356B52';
+    ctx.fillStyle = '#366875';
     ctx.fillText('to unveil our blessed date', w / 2, h / 2 + 10);
   }
 
@@ -691,7 +691,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
   const venues = {
     wedding: {
-      badge: 'Wedding Ceremony • Sunday, 10th Jan 2027',
+      badge: 'Baraat • Sunday, 10th Jan 2027',
       title: 'Akka Garden Marriage Hall',
       address: 'Azad Nagar, Mango, Jamshedpur, Jharkhand',
       pinLabel: '📍 Akka Garden Marriage Hall',
@@ -755,13 +755,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const downloadIcsBtn = document.getElementById('downloadIcsBtn');
 
   const eventDetails = {
-    title: 'Aeman weds Aquib — Wedding (Nikah)',
+    title: 'Aquib weds Aeman — Baraat',
     location: 'Akka Garden Marriage Hall, Jamshedpur (https://maps.google.com/?q=22.841519,86.2030102)',
     description:
-      'Assalamu Alaikum! Join us to celebrate the wedding of Aeman & Aquib.\n\n' +
-      '• Haldi: Friday, Jan 8, 2027 (6:00 PM Onwards)\n' +
-      '• Mehndi: Saturday, Jan 9, 2027 (6:00 PM Onwards)\n' +
-      '• Wedding (Nikah): Sunday, Jan 10, 2027 (7:00 PM Onwards) — Akka Garden Marriage Hall\n' +
+      'Assalamu Alaikum! Join us to celebrate the wedding of Aquib & Aeman.\n\n' +
+      '• Milad: Friday, Jan 8, 2027 (6:00 PM Onwards)\n' +
+      '• Haldi: Saturday, Jan 9, 2027 (6:00 PM Onwards)\n' +
+      '• Baraat: Sunday, Jan 10, 2027 (7:00 PM Onwards) — Akka Garden Marriage Hall\n' +
       '• Reception (Walima): Tuesday, Jan 12, 2027 (7:00 PM Onwards) — Madina Garden',
     startUTC: '20270110T190000',
     endUTC: '20270110T233000'
@@ -794,11 +794,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const icsLines = [
       'BEGIN:VCALENDAR',
       'VERSION:2.0',
-      'PRODID:-//AemanWedsAquib//WeddingInvitation//EN',
+      'PRODID:-//AquibWedsAeman//WeddingInvitation//EN',
       'CALSCALE:GREGORIAN',
       'METHOD:PUBLISH',
       'BEGIN:VEVENT',
-      'UID:aeman-weds-aquib-20270110@weddingcard.local',
+      'UID:aquib-weds-aeman-20270110@weddingcard.local',
       `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').split('.')[0]}Z`,
       `DTSTART:${eventDetails.startUTC}`,
       `DTEND:${eventDetails.endUTC}`,
@@ -814,7 +814,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.setAttribute('download', 'Aeman-weds-Aquib-Wedding.ics');
+    link.setAttribute('download', 'Aquib-weds-Aeman-Wedding.ics');
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

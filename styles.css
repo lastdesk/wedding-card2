@@ -1,23 +1,23 @@
 :root {
-  /* Centered Around #79BD9A Soft Jade Palette */
-  --lav-deep: #79BD9A;
-  --lav-mid: #96CEB1;
-  --lav-soft: #CBEAD8;
-  --lav-whisper: #E3F3EA;
-  --celadon-highlight: #A8DBA8;
-  --blush-white: #F4FAF6;
-  --accent-grad-end: #4D8C6D;
-  --pill-dark-bg: rgba(77, 140, 109, 0.88);
-  --arch-glow-1: rgba(244, 250, 246, 0.88);
-  --arch-glow-2: rgba(203, 234, 216, 0.45);
+  /* Coastal Seafoam, Sage-Cream & Sky-Teal Palette (#ADD8C7 · #E3E8CF · #8CCCBE · #7AC1C4 · #70AFC4) */
+  --lav-deep: #70AFC4;
+  --lav-mid: #7AC1C4;
+  --lav-soft: #ADD8C7;
+  --lav-whisper: #E3E8CF;
+  --celadon-highlight: #8CCCBE;
+  --blush-white: #F7F9F2;
+  --accent-grad-end: #528EA3;
+  --pill-dark-bg: rgba(62, 114, 133, 0.88);
+  --arch-glow-1: rgba(247, 249, 242, 0.9);
+  --arch-glow-2: rgba(227, 232, 207, 0.52);
 
-  /* Harmonized Deep Jade Typography & Contrast Shades */
-  --heading-color: #234F3B;
-  --plum-darker: #234F3B;
-  --plum-dark: #356B52;
-  --plum-muted: #528C70;
-  --card-bg: rgba(244, 250, 246, 0.95);
-  --shadow-soft: 0 12px 32px rgba(121, 189, 154, 0.22);
+  /* Harmonized Deep Slate-Teal Typography & Contrast Shades */
+  --heading-color: #244B57;
+  --plum-darker: #244B57;
+  --plum-dark: #366875;
+  --plum-muted: #4F8391;
+  --card-bg: rgba(247, 249, 242, 0.95);
+  --shadow-soft: 0 12px 32px rgba(112, 175, 196, 0.24);
 }
 
 * {
@@ -30,7 +30,7 @@
 html, body {
   width: 100%;
   min-height: 100%;
-  background-color: #1A3A2B;
+  background-color: #1B3942;
   color: var(--plum-darker);
   font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   overflow-x: hidden;
@@ -71,7 +71,7 @@ body.locked-scroll {
   height: 40px;
   border-radius: 50%;
   border: 1.5px solid var(--lav-deep);
-  background: rgba(244, 250, 246, 0.9);
+  background: rgba(247, 249, 242, 0.9);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   color: var(--heading-color);
@@ -79,7 +79,7 @@ body.locked-scroll {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 4px 14px rgba(35, 79, 59, 0.2);
+  box-shadow: 0 4px 14px rgba(36, 75, 87, 0.2);
   transition: transform 0.2s ease, background-color 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
 }
 
@@ -93,7 +93,7 @@ body.locked-scroll {
 }
 
 .music-mute-btn.is-muted {
-  background: rgba(244, 250, 246, 0.78);
+  background: rgba(247, 249, 242, 0.78);
   color: var(--plum-muted);
   border-color: var(--lav-mid);
 }
@@ -121,10 +121,10 @@ body.locked-scroll {
 
 @keyframes musicPulseRing {
   0%, 100% {
-    box-shadow: 0 4px 14px rgba(35, 79, 59, 0.2), 0 0 0 0 rgba(121, 189, 154, 0.45);
+    box-shadow: 0 4px 14px rgba(36, 75, 87, 0.2), 0 0 0 0 rgba(112, 175, 196, 0.45);
   }
   50% {
-    box-shadow: 0 4px 14px rgba(35, 79, 59, 0.22), 0 0 0 6px rgba(121, 189, 154, 0);
+    box-shadow: 0 4px 14px rgba(36, 75, 87, 0.22), 0 0 0 6px rgba(112, 175, 196, 0);
   }
 }
 
@@ -290,8 +290,8 @@ body.locked-scroll {
   pointer-events: none;
   background:
     radial-gradient(circle at 22% 18%, rgba(255, 245, 247, 0.96) 0%, transparent 52%),
-    radial-gradient(circle at 82% 76%, rgba(203, 234, 216, 0.76) 0%, transparent 58%),
-    linear-gradient(160deg, #FFFDF9 0%, #F4FAF6 54%, #E3F3EA 100%);
+    radial-gradient(circle at 82% 76%, rgba(173, 216, 199, 0.76) 0%, transparent 58%),
+    linear-gradient(160deg, #F7F9F2 0%, #E3E8CF 54%, #ADD8C7 100%);
   opacity: 1;
   transition: opacity 1.65s cubic-bezier(0.35, 0, 0.2, 1), visibility 0s linear 1.65s;
 }
@@ -609,7 +609,7 @@ body.locked-scroll {
   margin-top: 1px;
 }
 
-/* Names: Aeman Alfee weds Aquib Azad tucked neatly inside the upper arch */
+/* Names: Aquib Azad weds Aeman Alfee tucked neatly inside the upper arch */
 .couple-names-block {
   display: flex;
   flex-direction: column;
@@ -625,7 +625,7 @@ body.locked-scroll {
   line-height: 1.02;
   letter-spacing: 0.02em;
   white-space: nowrap;
-  text-shadow: 0 2px 10px var(--blush-white), 0 1px 3px rgba(121, 189, 154, 0.45);
+  text-shadow: 0 2px 10px var(--blush-white), 0 1px 3px rgba(112, 175, 196, 0.45);
 }
 
 .weds-script {
